@@ -1,1 +1,17 @@
-script: echo success
+language: java
+python:
+  - "2.7"
+jdk:
+  - oraclejdk8
+  - graal-jvmci-9
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
+before_install:
+  - echo "before_install"
+install:
+  - echo "install"
+script:
+  - echo "script"
